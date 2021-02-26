@@ -1,0 +1,25 @@
+{
+    "routes": [
+        {
+            "action": "serve",
+            "data": {
+                "location": "files/{1}",
+                "extension": "txt",
+                "defaultStatus": "404",
+                "defaultLocation": "files/404.txt",
+                "defaultExtension": "txt"
+            },
+            "match": "files/(.*)"
+        },
+        {
+            "action": "raw",
+            "data": {
+                "status": "200",
+                "data": "",
+                "extension": "txt"
+            },
+            "match": "favicon.ico"
+        }
+    ],
+    "default": "files/hi.txt"
+}
